@@ -1,25 +1,4 @@
 function css_courseInformation() {
-    $('.brandingImgWrap > a > img').attr('src', 'http://bbutner.me/header_institution_dark.png');
-    $('.bannerImage').css({
-        'margin-left': 'auto',
-        'margin-right': 'auto',
-        'left': '0',
-        'right': '0',
-        'top': 'auto'
-    });
-    $('.topTabs').css({
-        'background': 'none',
-        'background-color': '#F7F7F7',
-        'box-shadow': 'none'
-    });
-    $('#globalNavPageContentArea').css({
-        'background': 'none',
-        'background-color': '#E8E8E8'
-    });
-    $('#appTabList > tbody > tr > td > a > span').css({
-        'color': '#009688',
-        'text-shadow': 'none'
-    });
     $('.hideoff').css('border-bottom', '14px solid #E8E8E8');
     $('#column0, #column2').css('display', 'none')
     $('#content, .containerPortal, .contentBox').css({

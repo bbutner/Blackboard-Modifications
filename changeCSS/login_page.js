@@ -31,7 +31,8 @@ function css_loginPage() {
         'cursor': 'pointer',
         'text-decoration': 'none',
         'text-shadow': 'none',
-        'box-shadow': 'none'
+        'box-shadow': 'none',
+        'color': 'white'
     });
     // Align the labels with the input fields
     $('#loginFormList > li > label').css({

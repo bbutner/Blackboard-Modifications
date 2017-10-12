@@ -17,7 +17,13 @@
   "content_scripts": [
     {
       "matches": ["http://dacc.blackboard.com/*", "https://dacc.blackboard.com/*"],
-      "js": ["jquery.js", "main.js"],
+      "js": ["jquery.js", 
+        "changeCSS/class_list.js", 
+        "changeCSS/global_nav.js",
+        "changeCSS/login_page.js",
+        "changeCSS/misc_pages.js",
+        "changeCSS/portlet_page.js",
+        "main.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
     }

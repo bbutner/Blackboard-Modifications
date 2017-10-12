@@ -35,19 +35,21 @@ console.log(window.location.href);
 //TODO Add credits
 
 function changeCSS(url) {
-    console.log("CSS CHANGED");
+    if ($('#topTabs').length > 0) {
+        css_globalNav();
+    }
 
     if (url === "https://dacc.blackboard.com/" || url.includes("https://dacc.blackboard.com/webapps/login/")) {
         css_loginPage();
     } else if (url === "https://dacc.blackboard.com/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" || url === "https://dacc.blackboard.com/webapps/portal/execute/tabs/tabAction?tabId=_1_1&tab_tab_group_id=_1_1") {
         css_portletPage();
     } else if (url === "https://dacc.blackboard.com/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1") {
-        css_classInformation();
+        css_courseInformation();
     } else if (url.includes("https://dacc.blackboard.com/webapps/blackboard/execute/displayLearningUnit?course_id=") ||
      url.includes("https://dacc.blackboard.com/webapps/assignment/uploadAssignment?") ||
       url.includes("https://dacc.blackboard.com/webapps/blackboard/execute/announcement?") ||
        url.includes("https://dacc.blackboard.com/webapps/blackboard/content/listContent.jsp?") ||
         url.includes("https://dacc.blackboard.com/webapps/blackboard/messaging/course/folderList.jsp?")) {
-        css_miscPages();
+        css_miscPages(url);
     }
 }
