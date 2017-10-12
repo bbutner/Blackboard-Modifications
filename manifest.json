@@ -16,8 +16,8 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["jquery.js", "scripts.js"],
+      "matches": ["http://dacc.blackboard.com/*", "https://dacc.blackboard.com/*"],
+      "js": ["jquery.js", "main.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
     }
