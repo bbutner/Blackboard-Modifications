@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Blackboard Modifications",
+  "description": "CSS Website Manipulation",
+  "version": "1.0",
+
+  "web_accessible_resources": [
+    "header_institution.png"
+  ],
+
+  "browser_action": {
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery.js", "scripts.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
