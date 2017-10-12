@@ -53,10 +53,13 @@ function css_loginPage() {
     $('#loginAnnountements').css('text-align', 'center');
     $(document).find("a").css('color', '#009688');
 
+    /**
+     * Basically since I can't use JavaScript to modify the :before and :after selectors of the CSS on the login page bars, what I do here is
+     * loop through each one, getting the information from it, then removing all of them. After that, I create my own with my set styles and
+     * add the content one by one.
+     */
+
     if (counter2 == 0) {
-        /*
-            Lets do this the completely incorrect and idiotic way, shall we?
-        */
         $('#boxShadowList, #boxShadowList > li').css('display', 'none');
 
         var annHeaders = [];
@@ -70,7 +73,6 @@ function css_loginPage() {
             $(this).remove();
         });
 
-        // I'm ashamed of this
         for (var x = 0; x < annHeaders.length; x++) {
             var currentDiv = document.createElement("div");
             $(currentDiv).addClass('newAnnBox');
@@ -80,7 +82,6 @@ function css_loginPage() {
             $(currentDiv).append(annDate[x]);
 
             $(currentDiv).find("strong:first").html($(currentDiv).find("strong:first").html() + "<br><br>");
-            // $(currentDiv).find("p").html($(currentDiv).find("p").html().replace("<br>", ""));
             $(currentDiv).find("p:last").find("br").remove();
 
             $(currentDiv).find("em").html("<br>" + $(currentDiv).find("em").html());
@@ -91,7 +92,6 @@ function css_loginPage() {
             });
 
             document.getElementById('loginAnnouncements').appendChild(currentDiv);
-            // Oh god why...
         }
 
         $('#boxShadowList').css('display', 'block');

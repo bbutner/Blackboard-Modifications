@@ -134,4 +134,8 @@ function css_miscPages(url) {
     $('.copyright').remove();
 
     $('#content > .localViewToggle > .clearfix').css('background-color', 'rgb(247, 247, 247)');
+
+    $('.tocItem').css('color', 'black');
+
+    //TODO GRADES PAGE + SIDE BAR ON COURSE MATERIALS TO GLOBAL AS WELL
 }
